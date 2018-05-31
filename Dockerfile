@@ -1,8 +1,8 @@
-LABEL maintainer="nicolas.maurice.valera@gmail.com"
-
 FROM ethereum/solc:stable as solc
 
 FROM python:3.6-alpine
+
+LABEL maintainer="nicolas.maurice.valera@gmail.com"
 
 COPY --from=solc /usr/bin/solc /usr/bin
 
